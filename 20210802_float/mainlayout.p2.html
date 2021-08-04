@@ -4,38 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연습이다아</title>
+    <title>mainpage</title>
     <style>
         *{margin: 0;padding: 0;}
         li{list-style: none;}
-        a:link,a:visited{text-decoration: none;color:black}
-        .clearfix:after{content:"";clear:both;display: block;}
+        a:link,a:visited{text-decoration: none;color: black;}
+        .clearfix:after{content:"";clear: both;display: block;}
 
-        div.nav{width: 0;margin: 0 auto;background-color: lightgray;}
+        header.header{
+            width: 1000px;margin: 0 auto;
+        }
+        header.header>h1{text-align: center;}
+        nav.nav>ul>li{float: left;width: 20%;background-color: gray;}
+        nav.nav>ul>li>a{display: block;line-height: 40px;text-align: center;}
+        nav.nav>ul>li>a:hover{background-color: blue;color: white;}
 
-        div.nav>ul>li{
-            float: left;width: 200px;
+        .container{width: 1000px;margin: 0 auto;background-color: skyblue;text-align: center;}
+        .container>.aside{float: left;width: 300px;background-color: blue;line-height: 800px;}
+        .container>.section{float: right;width: 680px;background-color: cornflowerblue;line-height: 800px;}
+
+        footer.footer{
+            width: 1000px;margin: 0 auto;
+            background-color: plum;
+            text-align: center;
+            line-height: 100px;
         }
 
-        div.nav>ul>li>a{display: block;text-align: center;line-height: 40px;}
 
-        
+
 
     </style>
 </head>
 <body>
-    <div class="nav">
-        <div class="clearfix">
+    <header class="header">
+        <h1><a href="#">logo</a></h1>
+        <nav class="nav">
             <ul>
-                <li><a href="#">menu1</a></li>
-                <li><a href="#">menu2</a></li>
-                <li><a href="#">menu3</a></li>
-                <li><a href="#">menu4</a></li>
-                <li><a href="#">menu5</a></li>
+                <li><a href="#">category</a></li>
+                <li><a href="#">my</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">search</a></li>
+                <li><a href="#">menu</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
+
+    <div class="container clearfix">
+        <aisde class="aside">aside</aisde>
+        <section class="section">section</section>
     </div>
-    
+
+    <footer class="footer">footer</footer>
     
 </body>
 </html>
