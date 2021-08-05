@@ -5,11 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>연습이다</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body{font-family: 'Roboto', sans-serif;}
+
+        /* header  */
+        header#header{}
+        header#header > div.topwrap{border-bottom: 1px solid #c4c4c4;}
+        header#header > div.topwrap > div.top{
+            width: 980px;margin: 0 auto;
+        }
+        nav.util{float: right;}
+        nav.util>ul{}
+        nav.util>ul>li{float: left;}
+        nav.util>ul>li>a{
+            display: block;text-align: center;line-height: 26px;padding: 0px 10px;height: 26px;
+            color: #888;font-size: 14px;position: relative;
+        }
+        nav.util>ul>li>a:after{
+            content: "";width: 1px;height: 10px;
+            display: block;background-color: #c4c4c4;
+            position: absolute;top: 7px;right: 0;
+        }
+        nav.util>ul>li:last-child>a:after{
+            content: "";display: none;
+        }
+        div.logwrap{width: 980px;margin: 0 auto;}
+        div.logwrap>h1{width: 200px;margin: 0 auto;}
+        div.logwrap>h1>a{display: block;text-align: center;line-height: 75px;}
+
+        div.navwrap{background-color: #1d5da4;}
+        div.navwrap>nav.gnb{width: 980px;margin: 0 auto;}
+        div.navwrap>nav.gnb li{
+            float: left;width: calc(980px / 6);border-right: 1px solid #336dac;
+        }
+        div.navwrap>nav.gnb li:first-child{
+            border-left: 1px solid #336dac;
+        }
+        div.navwrap>nav.gnb a{
+            display: block;text-align: center;line-height: 45px;color: #fff;font-weight: bold;
+        }
+        div.navwrap>nav.gnb a:hover{
+            background-color: blue;
+        }
+
+        /* visual */
+        div.visualwrap{
+            height: 400px;overflow: hidden;
+            background-color: #203b64 url(./images/visual01.jpg) no-repeat center;
+        }
+        
+    </style>
     
 </head>
 <body>
+    <!-- header start -->
+    <header id="header">
+        <div class="topwrap">
+            <div class="top clearfix">
+                <nav class="util">
+                    <ul class="clearfix">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Join</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="navwrap">
+            <nav class="gnb">
+                <ul class="clearfix">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">제품소개</a></li>
+                    <li><a href="#">사업영역</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">사회공헌</a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- visual start -->
+    <div class="visualwrap">
+        <div class="visual">
+            <div class="visualtxt">
+                <p>NEXT<br>ENERGY</p>
+            </div>
+            <img src="./images/main_slider_img01.png" alt="">
+        </div>
+    </div>
+    <!-- visual end -->
+    <div style="height: 200px;background-color: black;"></div>
     
 </body>
 </html>
