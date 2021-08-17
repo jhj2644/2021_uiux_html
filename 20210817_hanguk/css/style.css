@@ -1,0 +1,33 @@
+@charset "utf-8";
+body{font-family: 'NanumGothic';}
+
+/* header  */
+header#header{}
+header#header div.topWrap{background: #0044AF;margin: 0 auto;}
+div.utilWrap{
+    width: 1200px;margin: 0 auto;background: skyblue;position: relative;
+}
+div.util1{float: left;}
+div.util2{float: right;}
+div.utilWrap div.util1 ul li{float: left;_background: red;}
+div.util1 ul li a{
+    display: block;text-align: center;line-height: 40px;
+    padding: 0 12px;height: 40px;
+    color: #6A6A6A;font-size: 15px;
+}
+
+div.utilWrap div.util2 ul li{float: left;_background: yellow;}
+div.util2 ul:nth-child(1){
+    display: block;text-align: center;line-height: 40px;
+    padding: 0 10px;height: 40px;font-size: 12px;
+    color: #D2D2D0;
+}
+div.util2 ul li a{
+    display: block;text-align: center;line-height: 40px;
+    padding: 0 8px;height: 40px;
+    color: #FEFFFF;font-size: 12px;
+}
+
+
+
+
