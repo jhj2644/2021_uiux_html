@@ -5,15 +5,22 @@ body{font-family: 'NanumGothic';}
 header#header{}
 header#header div.topWrap{background: #0044AF;margin: 0 auto;}
 div.utilWrap{
-    width: 1200px;margin: 0 auto;background: skyblue;position: relative;
+    width: 1200px;margin: 0 auto;background: #0044AF;position: relative;
 }
 div.util1{float: left;}
 div.util2{float: right;}
-div.utilWrap div.util1 ul li{float: left;_background: red;}
+
+div.utilWrap div.util1 ul li{float: left;padding: 0 2px;}
 div.util1 ul li a{
     display: block;text-align: center;line-height: 40px;
+    width: 120px;
     padding: 0 12px;height: 40px;
-    color: #6A6A6A;font-size: 15px;
+    color: #F8F8F8;font-size: 15px;
+    background: #00163B;
+}
+div.util1 ul li a:hover{
+    background-color: #FFFFFF;
+    color: #6A6A6A;
 }
 
 div.utilWrap div.util2 ul li{float: left;_background: yellow;}
