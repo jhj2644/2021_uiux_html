@@ -11,16 +11,14 @@
        /* table td{border: 1px solid #000;} */
        .table1 td{border: 1px solid #000;border-left: 0 none;}
        .table1 td:last-child{border-right: 0 none;}
-       .table1 table{
-           width: 500px;
-           border-collapse: collapse; /*table을 만들 때 기본으로 넣어야 하는 값*/
-        }
-       /* td{
+       .table1{width: 500px;margin-bottom: 20px;}
+       /*  border-collapse: collapse;   <---table을 만들 때 기본으로 넣어야 하는 값*/
+       .table1 td{
            height: 200px;text-align: center;
-           vertical-align: top;
+           vertical-align: bottom;
            background: blue url(../images/testimg.jpg) no-repeat center;
-    } */
-    .table1{margin-bottom: ;}
+    }
+    
     </style>
 </head>
 <body>
@@ -65,9 +63,9 @@
     <style>
         table.sample1{width: 800px;font-size: 14px;color: white;margin: 0 auto;}
         table.sample1 td,table.sample1 th{_border: 1px solid #000;padding: 10px 0;}
-        table.sample1 thead tr th:nth-child(1){background: #6c3306;width: 20%;}
-        table.sample1 thead tr th:nth-child(2){background: #000;width: 30%;}
-        table.sample1 thead tr th:nth-child(3){background: #363636;}
+        table.sample1 thead th:nth-child(1){background: #6c3306;width: 20%;}
+        table.sample1 thead th:nth-child(2){background: #000;width: 30%;}
+        table.sample1 thead th:nth-child(3){background: #363636;}
         table.sample1 thead{color: orange;}
 
         table.sample1 tbody tr{background: #888;text-align: center;}
@@ -76,19 +74,19 @@
 
 
         /* after  */
-        table.sample1 tbody tr>td{position: relative;}
-        table.sample1 tbody tr>td:after{
+        table.sample1 tbody tr td{position: relative;}
+        table.sample1 tbody tr td:after{
             content: "";display: block;width: 1px;height: 20px;
-        background: #fff;position: absolute;top: 10px;right: 0;}
+            background: #fff;position: absolute;top: 10px;right: 0;}
 
-        table.sample1 tbody tr>td:last-child::after{content: "";display: none;}
+        table.sample1 tbody tr td:last-child::after{content: "";display: none;}
 
 
         /* hover      */
         table.sample1 tbody tr:hover{background: #555;}
 
         table.sample1 tfoot tr{text-align: center;background: rgb(65, 65, 65);}
-        
+
     </style>
     <table class="sample1">
         <thead>
@@ -100,41 +98,43 @@
         </thead>
         <tbody>
             <tr>
-                <td>lorem</td>
-                <td>Lorem.</td>
-                <td>Lorem.</td>
+                <td>상점관리</td>
+                <td>판매자·관리자 </td>
+                <td>결제 및 배송 서비스 관리</td>
             </tr>
             <tr>
-                <td>lorem</td>
-                <td>Lorem.</td>
-                <td>Lorem.</td>
+                <td>디자인 관리</td>
+                <td>관리자·디자이너</td>
+                <td>소비자 및 회원 주문 내역 관리</td>
             </tr>
             <tr>
-                <td>lorem</td>
-                <td>Lorem.</td>
-                <td>Lorem.</td>
+                <td>상품관리</td>
+                <td>판매자·관리자</td>
+                <td>신제품 등록 및 제품 관리</td>
             </tr>
             <tr>
-                <td>lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
+                <td>주문관리</td>
+                <td>판매자</td>
+                <td>제품 판매 및 매출 관리</td>
             </tr>
             <tr>
-                <td>lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
+                <td>회원관리</td>
+                <td>판매자·관리자</td>
+                <td>쇼핑몰에 등록된 회원 정보 관리</td>
             </tr>
             <tr>
-                <td>lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
+                <td>접속통계</td>
+                <td>관리자</td>
+                <td>쇼핑몰 방문자 수 조회 및 분석</td>
             </tr>
             <tr>
-                <td>lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
+                <td>부가서비스</td>
+                <td>판매자·관리자</td>
+                <td>쇼핑몰 운영에 필요한 서비스 및 선택 사항 관리</td>
             </tr>
         </tbody>
+
+
         <tfoot>
             <tr>
                 <td>10</td>
@@ -142,6 +142,48 @@
                 <td>10</td>
             </tr>
         </tfoot>
+    </table>
+
+    <br>
+    <br>
+    <style>
+        table.sample2{width: 500px;}
+        table.sample2 td{
+            background: skyblue;width: 20%;
+            border: 1px solid #000;
+        }
+    </style>
+    <table class="sample2">
+        <tr>
+            <td rowspan="4">Lorem.</td>
+            <td>Accusamus.</td>
+            <td>Excepturi?</td>
+            <td>Magnam.</td>
+            <td rowspan="3">Inventore.</td>
+        </tr>
+        <tr>
+            <td>L&nbsp;&nbsp;&nbsp;orem.</td>  <!--&nbsp;    <----줄 띄움 -->
+            <td>Accusamus.</td>
+            <td>Excepturi?</td>
+            <!-- <td>Magnam.</td> -->
+            <!-- <td>Inventore.</td> -->
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Accusamus.</td>
+            <td>Excepturi?</td>
+            <!-- <td>Magnam.</td> -->
+            <!-- <td>Inventore.</td> -->
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td colspan="3">Accusamus.</td>
+            <!-- <td>Excepturi?</td>
+            <td>Magnam.</td> -->
+            <!-- <td>Inventore.</td> -->
+
+            <!-- 세로 합치는거 rowspan 가로 합치는거 colspan -->
+        </tr>
     </table>
 
 </body>
