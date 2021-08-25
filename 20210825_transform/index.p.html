@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container{width: 1000px;margin: 0 auto;}
+        .container h1{margin-top: 20px;margin-bottom: 20px;text-align: center;}
+        .gallList li{
+            float: left;width: calc( (100% - 20px) / 3 );
+            margin-right: 10px;
+            
+        }
+        .gallList li:last-child{margin-right: 0;}
+        .gallList li:hover img{
+            transform:translateY(-15px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LIME</h1>
+        <ul class="gallList clearfix">
+            <li><img src="../images/lime-300.jpg" alt=""></li>
+            <li><img src="../images/lime-300.jpg" alt=""></li>
+            <li><img src="../images/lime-300.jpg" alt=""></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
