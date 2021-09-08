@@ -7,24 +7,40 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css">
     <style>
-        .gnb{width: 1000px;margin: 0 auto;}
+        .gnb{
+            width: 1000px;margin: 0 auto;
+            position: relative;z-index: 1;
+        }
         .gnb>ul>li{
             float: left;width: calc(100% / 4);
             background: skyblue;
+            position: relative;
+            transition: 0.3s;
         }
         .gnb>ul>li>a{
             display: block;
             text-align: center;
             line-height: 40px;
+            position: relative;
+            z-index: 1;
         }
-        .submenu{display: none;}
-        .submenu li a{display: block;text-align: center;line-height: 30px;}
-        .submenu li:hover{background: orange;}
+        .gnb>ul>li:hover{background: blue;}
+        .gnb>ul>li:hover .submenu{top: 100%;display: block;}
+
+        .submenu{
+            position: absolute;
+            width: 100%;top: -300%;
+            transition: 0.3s;background: yellow;
+        }
+        .submenu li a{display: block;line-height: 30px;text-align: center;}
+        .submenu a:hover{background: pink;}
+
+        
     </style>
 </head>
 <body>
     <nav class="gnb">
-        <ul>
+        <ul class="clearfix">
             <li>
                 <a href="#">MENU1</a>
                 <ul class="submenu">
@@ -61,10 +77,10 @@
                     <li><a href="#">sub04_04</a></li>
                 </ul>
             </li>
-            
-            
         </ul>
     </nav>
+
+    
     
 </body>
 </html>
