@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <!-- <div class="box"></div>
     <button onclick="printArr()">자료넣기</button>
     <script>
         const city1 = ["대전","인천"];
@@ -36,7 +36,7 @@
         <script>
             printArr();
         </script>
-    </div> -->
+    </div> --> -->
 
 
 
@@ -74,5 +74,31 @@
     <div class="box"></div>
     <div class="box"></div>
     <button onclick="print()">도시</button>
+
+    <script>
+        const arrdata = [];
+        let sum = 0;//총합을 저장
+
+
+        for(let i=0;i<=99;i++){
+            arrdata[i] = i + 1;
+        }
+
+        for(let i=0;i<arrdata.length;i++){
+            document.write(arrdata[i]+" ")
+        }
+
+
+        for(let i=0;i<arrdata.length;i++){
+            // sum = sum + arrdata[i];
+            sum += arrdata[i];
+        }
+
+        document.write(sum);
+
+        let num = new Number(1);
+        let string = new String()
+
+    </script>
 </body>
 </html>
