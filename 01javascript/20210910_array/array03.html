@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{background: skyblue;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button onclick="printArr()">자료넣기</button>
+    <script>
+        const city1 = ["대전","인천"];
+        const city = new Array("서울","부산","대구");
+        // length 는 데이터의 개수를 뜻함
+
+        function printArr(){
+            let print="";
+            for(let i=0;i<city.length;i++){
+                // document.write(city[i])
+                print = print + city[i];
+            } 
+            // document.write(print)
+            document.getElementsByClassName("box")[0].innerHTML = print
+        }
+
+        // printArr()
+        
+        
+    </script>
+
+    <!-- <div class="box">
+        <script>
+            printArr();
+        </script>
+    </div> -->
+
+
+
+
+
+
+    <script>
+        const printArr = new Array("서울","부산","대구","인천");
+
+        function print(){
+
+            let sum ="";
+            for(let i=0;i<printArr.length;i++){
+                sum = sum + printArr[i]
+            }
+            // document.write(sum);
+            // document.getElementsByClassName("box")[0].innerHTML = sum;
+            // document.querySelector(".box").innerHTML = sum;
+
+            const boxDiv = document.getElementsByClassName("box");
+            for(let i=0;i<boxDiv.length;i++){
+                console.log(1);
+                boxDiv[i].innerHTML = sum;
+
+            }
+
+
+        }
+
+        // print()
+    </script>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <button onclick="print()">도시</button>
+</body>
+</html>
