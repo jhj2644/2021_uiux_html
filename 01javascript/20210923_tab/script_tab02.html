@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        .tab{display: flex;}
+        .tab li{
+            width: 100px;text-align: center;
+            padding: 10px 0;
+        }
+        .tab li.on{background: skyblue;}
+
+        .box div{display: none;width: 200px;padding: 20px;}
+        .box div:first-child{display: block;}
+    </style>
+</head>
+<body>
+    <ul class="tab">
+        <li class="on">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+        <li>tab4</li>
+    </ul>
+
+    <div class="box">
+        <div>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, quo?</div>
+        <div>2Accusantium amet et veritatis fugiat quasi neque qui, placeat cumque!</div>
+        <div>3Doloremque repudiandae voluptatem omnis voluptatum deserunt dolorem laudantium sit facere.</div>
+        <div>4Dignissimos asperiores, a in facere laboriosam neque molestiae vel corporis!</div>
+    </div>
+
+    <script>
+        const tabList = document.querySelectorAll(".tab li");
+        const boxCon = document.querySelectorAll(".box div");
+
+
+        for(let j=0;j<tabList.length;j++){
+
+            tabList[i].onclick = function(){
+
+                for(let i=0;i<tabList.length;i++){
+                    tabList[i].classList.remove("on"); //jquery 에서는 addClass() removeClass("on")
+                }
+
+                for(let i=0;i<tabList.length;i++){
+                    boxCon[i].style.display("none");
+                }
+                // this.classList.add("on");
+                tapList[j].classList.add("on");
+                tapList[j].style.display = "block"
+            }; 
+        };
+        
+    </script>
+</body>
+</html>
