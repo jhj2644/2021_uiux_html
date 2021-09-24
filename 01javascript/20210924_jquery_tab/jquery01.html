@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+        // $(function(){});
+        $(document).ready(function(){
+            // $("p").hide()
+            // $("p").eq(0).hide().show();
+            // eq(0)은 eq의 0번째라는 뜻
+            $("p").eq(0).css("background-color","#ff0"); //set
+            let pBg = $("p").eq(0).css("background-color") //get
+            console.log(pBg);
+            console.log($("p").length);
+
+            $(".btn").on("click",function(){
+                $("p").eq(1).css({
+                    "background":"skyblue",
+                    "border":"1px solid #000",
+                    "position":"relative",
+                    "left":"100px"
+                })
+            });
+
+            $(".btn1").click(function(){
+                $("p").eq(1).css({
+                    "background":"white",
+                    "border":"initial",
+                    "position":"initial"
+                });
+                // $("p").eq(1).attr("style","")
+            });
+        });
+    </script>
+</head>
+<body>
+    <button class="btn">변경</button>
+    <button class="btn1">원래대로</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum soluta repellendus sed eligendi! Iusto necessitatibus soluta ducimus dolorum? Rem quae vel illo quis, fugiat quia vitae modi laboriosam. Itaque, saepe.</p>
+    <p>Qui suscipit officiis vitae nisi dicta iusto laborum sapiente dolorem recusandae ad perferendis explicabo dolore, quidem consequuntur in minima iure molestias laudantium nulla, excepturi voluptatem error! Officiis dolor nemo vitae.</p>
+    <p>Iusto architecto delectus qui harum porro fugiat nisi deleniti vitae libero culpa unde veritatis in sapiente nam, error tenetur itaque expedita maiores explicabo quae commodi voluptatibus rem? Tempora, consectetur veniam.</p>
+    <p>Tenetur dolorum magni nobis repudiandae aspernatur cupiditate fugit magnam sint. Molestiae quasi laudantium fugit dolore, nobis consectetur ea! Illo nostrum accusantium excepturi cum quod maiores odit, laboriosam harum culpa assumenda?</p>
+
+    <script>
+
+        // for(let i=0;i<4;i++){
+        //     document.getElementsByTagName("p")[i].style.display = "none";
+        // }
+    </script>
+</body>
+</html>

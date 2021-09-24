@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .tab li{float: left;padding: 10px 20px;cursor: pointer;}
+        .tab li.on{background: skyblue;}
+        .con div{display: none;}
+        .con div:first-child{display: block;}
+    </style>
+</head>
+<body>
+    <ul class="tab clearfix">
+        <li class="on">menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+
+    <div class="con">
+        <div>1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, quidem. Totam, alias quam deleniti eos vitae veritatis est nobis odio, dicta omnis unde rerum fugit voluptatibus nostrum officiis. Perspiciatis, nihil?</div>
+        <div>2 Mollitia aspernatur enim saepe impedit hic labore laudantium quidem laborum. Dolore deleniti tenetur dolorum voluptatem nesciunt. Nobis sapiente eum non assumenda ratione, consequuntur inventore voluptas laudantium unde cupiditate quos maiores?</div>
+        <div>3 Repudiandae deleniti quos qui, nostrum provident aspernatur inventore quo optio, animi reiciendis nihil eveniet corrupti sint dolor maiores aliquid quisquam. Necessitatibus molestiae velit odit quis dolor ea, vero fugiat maxime!</div>
+        <div>4 Consequuntur nihil iusto autem dolores ipsa, quisquam laborum? Placeat inventore nesciunt tempora! Et nobis rem, consequatur, accusantium nisi repellat recusandae corporis fugiat beatae ipsam, animi molestias. Labore ducimus ab quod!</div>
+    </div>
+
+    <script>
+        // $("ul>li").eq(0).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(0).addClass("on");
+        // });
+
+        // $("ul>li").eq(1).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(1).addClass("on");
+        // });
+
+        // $("ul>li").eq(2).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(2).addClass("on");
+        // });
+
+        // $("ul>li").eq(3).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(3).addClass("on");
+        // });
+
+        // for(let i=0;i<$("ul>li").length;i++){
+        //    $("ul>li").eq(i).click(function(){
+        //        $("ul>li").removeClass();
+        //        $("ul>li").eq(i).addClass("on");
+        //    });
+        // }
+
+        $("ul>li").click(function(){
+
+            let num = $(this).index();
+            console.log($(this).index());
+            $("ul>li").removeClass();
+            $(this).addClass("on");
+
+            $(".con>div").hide();
+            $(".con>div").eq(num).show();
+        });
+    </script>
+</body>
+</html>
