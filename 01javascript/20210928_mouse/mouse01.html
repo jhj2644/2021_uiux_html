@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ipsum modi quos mollitia maxime perferendis temporibus, eligendi quo repellat beatae similique ex molestiae assumenda dicta eveniet in enim? Consequuntur odit animi quas, quos illo rerum at culpa saepe, commodi nulla quidem eum cum ut. Expedita eum consectetur laborum molestiae illum odio alias, ex, nulla a repudiandae eaque recusandae temporibus error blanditiis dicta neque atque minima eligendi. Molestias accusantium neque enim quod aspernatur corrupti nihil praesentium ipsam eaque, ipsa omnis dolorem magnam architecto eveniet distinctio? Perferendis vel eveniet nisi laborum amet non, beatae id consequatur. Molestiae quod velit enim repudiandae distinctio.
+    <img src="../images/testimg.jpg" alt="" onmousemove="where(event)">
+
+    <div class="infor">
+        
+    </div>
+
+    <script>
+        const infor = document.querySelector(".infor");
+        function where(e){
+            let txt = "";
+            txt += `clientX : ${e.clientX}, clientY : ${e.clientY}<br>`
+            txt += `offsetX : ${e.offsetX}, offsetY : ${e.offsetY}<br>`
+            
+            infor.innerHTML = txt;
+        }
+    </script>
+</body>
+</html>
