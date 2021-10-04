@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jquery</title>
     <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .box{background: red;}
+    </style>
     <script>
         //btn을  클릭하면 p tag를 숨김
         $(document).ready(function(){
+
+            const tHtml = "jay";
             $(".btn").click(function(){
-                $("p").hide()
+                $("p").hide();
+                $("body").append(`<div class="box">${tHtml}</div>`);
             });
+
+
+            
+            $("body").prepend("자식노드추가1");
         });
     </script>
 </head>
@@ -20,6 +30,14 @@
     <button class="btn">클릭</button>
 
 
+
+    <script>
+        // const btn = document.querySelector(".btn");
+        // const pTag = document.querySelector("p");
+        // $(".btn")[0].onclick = function(){
+        //     pTag.style.display = "none";
+        // };
+    </script>
 
 </body>
 </html>
