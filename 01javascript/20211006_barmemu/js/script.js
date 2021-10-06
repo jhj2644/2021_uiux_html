@@ -31,7 +31,7 @@ function nowMenu(menu){ //menu = "main"
         if(menu == "main"){
             $(".bar").css("opacity",0);
         }
-        $(".bar").css("left",200*menu);
+        $(".bar").css("left",200*menu); //"left"는 css에 left 값을 넣었기 때문에 left 값을 움직여야함
     });
 
 
