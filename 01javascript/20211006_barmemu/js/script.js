@@ -1,3 +1,7 @@
+
+$(document).ready(function(){})
+
+
 function nowMenu(menu){ //menu = "main"
     if(menu == "main"){
         $(".bar").css("opacity",0)
@@ -11,19 +15,23 @@ function nowMenu(menu){ //menu = "main"
 
 
 
-    $(".menu li").hover(function(){
-        let menuLi = $(this).index()
+    $(".menu li").hover(function(){ //hover는 리스너(function,function)가 두개 들어감
+        let menuLi = $(this).index();
+
+        $(this).css("background-color","skyblue");
 
         if(menu == "main"){
-            $(".bar").css("opacity",1)
+            $(".bar").css("opacity",1);
         }
 
-        $(".bar").css("left",200*menuLi)
+        $(".bar").css("left",200*menuLi);
+
     },function(){
+        $(this).css("background-color","initial");
         if(menu == "main"){
-            $(".bar").css("opacity",0)
+            $(".bar").css("opacity",0);
         }
-        $(".bar").css("left",200*menu)
+        $(".bar").css("left",200*menu);
     });
 
 
