@@ -2,7 +2,7 @@
 // $(document).ready(function(){})
 
 
-function nowMenu(menu){ //menu = "main"
+function nowMenu(menu){ //menu = "main" , menu의 맨처음은 0이 들어온다 menu = 0
     if(menu == "main"){
         $(".bar").css("opacity",0)
         console.log("메인 연결됨");
@@ -14,7 +14,9 @@ function nowMenu(menu){ //menu = "main"
     }
 
 
+    
 
+    //$("menu li").hover(function(){},function(){})
     $(".menu li").hover(function(){ //hover는 리스너(function,function)가 두개 들어감
         let menuLi = $(this).index();
 
