@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll menu</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+
+    <style>
+        .menu{width: 100%;background: #ccc;}
+        .menu.fixed{position: fixed;background: skyblue;width: 100%;}
+        .menu.fixed a{line-height: 40px;}
+        .menu ul{width: 1000px;margin: 0 auto;}
+        .menu li{float: left;width: 20%;}
+        .menu li a{display: block;text-align: center;line-height: 60px;transition: 0.3s;}
+
+        .content{height: 3000px;}
+    </style>
+
+    <script>
+        // $(function(){})
+        // $(document).ready(function(){})
+        $(function(){
+            $(document).mousewheel(function(event,delta){
+
+                console.log(delta) //scroll 위 +1
+
+
+                $(window).scroll(function(){
+                    let scrollY = $(window).scrollTop();  //window.pageYOffset
+                    if(scrollY > 200){
+                        // $(".menu").addClass("fixed")
+
+
+                        if(delta > 0){
+                            $(".menu").addClass("fixed")
+                        }else{
+                            $(".menu").removeClass("fixed")
+                        }
+
+
+
+
+                    }else{
+                        $(".menu").removeClass("fixed")
+                    }
+                })
+
+
+
+
+            });
+
+            
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="menu">
+            <ul class="clearfix">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati explicabo molestiae quos consequatur reiciendis perspiciatis, numquam corrupti dignissimos sequi nobis nulla repellat recusandae deserunt! Sequi, exercitationem ipsam non soluta, possimus et quos veniam beatae similique voluptate explicabo natus dolorem facere repudiandae cupiditate fugit rem officia quidem nobis, est molestiae facilis? Ab, tenetur? Natus, inventore nulla? Quae beatae voluptatum distinctio! Nisi facere aut quo hic voluptas doloribus vel molestias nulla voluptatum, autem qui dolore ad sequi impedit ratione! Officiis harum optio dolorem nihil perferendis, voluptatibus at laborum in quis illo itaque dolorum, molestias, sequi consequatur ducimus. Commodi quia magni suscipit praesentium!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati explicabo molestiae quos consequatur reiciendis perspiciatis, numquam corrupti dignissimos sequi nobis nulla repellat recusandae deserunt! Sequi, exercitationem ipsam non soluta, possimus et quos veniam beatae similique voluptate explicabo natus dolorem facere repudiandae cupiditate fugit rem officia quidem nobis, est molestiae facilis? Ab, tenetur? Natus, inventore nulla? Quae beatae voluptatum distinctio! Nisi facere aut quo hic voluptas doloribus vel molestias nulla voluptatum, autem qui dolore ad sequi impedit ratione! Officiis harum optio dolorem nihil perferendis, voluptatibus at laborum in quis illo itaque dolorum, molestias, sequi consequatur ducimus. Commodi quia magni suscipit praesentium!
+        </div>
+    </div>
+</body>
+</html>
