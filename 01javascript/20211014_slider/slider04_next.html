@@ -25,12 +25,29 @@
         .btn .prev{position: absolute;top:50%;transform: translateY(-50%);left: 0;}
         .btn .next{position: absolute;top:50%;transform: translateY(-50%);right: 0;}
 
+
+
+        .wrapper .pager{
+            position: absolute;bottom: 15px;left: 50%;
+            transform: translateX(-50%);}
+        .wrapper .pager span{
+            width: 15px;height: 15px;
+            display: inline-block;
+            border-radius: 8px;
+            background: #c4c4c4;
+            text-indent: -9999px;cursor: pointer;
+            
+        }
+        .wrapper .pager span:hover{background: #fff;}
+        .wrapper .pager span.active{background: #fff;}
+
     </style>
 
 
     <script>
         $(function(){
             let current = 0;
+            
             let overBtn = false;
 
             function nextSlider(){
@@ -67,7 +84,7 @@
 
 
             $(".next").click(function(){
-              nextSlider()
+                nextSlider()
             });
 
             $(".prev").click(function(){
@@ -77,6 +94,41 @@
             setInterval(function(){
                 $(".next").trigger("click")
             },3000)
+
+
+
+
+            // function slider(view){
+            //     let currentEl = banner.eq(current);
+            //     let nextEl = banner.eq(i)
+
+
+            //     $(".pager span").removeClass("active").eq(i).addClass("active");
+            //     if(view == "next"){
+            //         currentEl.css("left",0).stop().animate({left:"-100%"},300);
+            //         nextEl.css({left:"100%"}).stop().animate({left:0},300,function(){overBtn=false});
+            //     }else{
+            //         currentEl.css("left",0).stop().animate({left:"100%"},300);
+            //         nextEl.css({left:"-100%"}).stop().animate({left:0},300,function(){overBtn=false})
+            //     }
+            //     current = i;
+            // }
+
+            // $(".pager span").click(function(){
+            //     i = $(this).index()
+            //     slider("next")
+            // })
+
+
+
+            // $(".wrapper").mousewheel(function(e,delta){
+            //     if(delta < 0){
+            //         $(".next").trigger("click");
+            //     }else{
+            //         $(".prev").trigger("click");
+
+            //     }
+            // });
 
 
 
@@ -102,6 +154,15 @@
             <a href="#" class="prev"><img src="images/prevBtn.png" alt="prev"></a>
             <a href="#" class="next"><img src="images/nextBtn.png" alt="next"></a>
         </div>
+
+
+        <!-- <div class="pager">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div> -->
     </div>
 </body>
 </html>
