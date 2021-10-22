@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            position: absolute;
+            left: 50%;top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box3d{box-shadow: rgba(0, 0, 0, 10px);}
+        .side{transform: translate3d(0,-440px,0);}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="book3d">
+            <div class="book cover"><img src="images/book_cover.png" alt=""></div>
+            <div class="book side"><img src="images/book_side.png" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>
