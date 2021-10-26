@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const object = {'name':'john','age':30}
+        // const obj = {
+        //     employees: ["john","anna","peter"],
+        //     ye:[30,50,60]
+        // }
+
+        const obj = {
+            em:[
+                {firstname:"john",lastname:"doe"},
+                {firstname:"anna",lastname:"jones"},
+                {firstname:"peter",lastname:"smith"}
+            ]
+        }
+
+
+        for (let i = 0;i < obj.em.length;i++){
+            console.log(obj.em[i]["firstname"]+","+obj.em[i]["lastname"])
+        }
+    </script>
+</body>
+</html>
