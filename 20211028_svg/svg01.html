@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .sv{
+            background: #ccc;
+            width: 100px;height: 100px;
+        }
+        .sv circle{
+            stroke: green;
+            stroke-width: 30;
+            fill: skyblue;
+            stroke-dasharray: 189;
+            stroke-dashoffset: 189;
+            animation: ani 1s forwards alternate;
+        }
+        @keyframes ani{
+            100%{stroke-dashoffset: 100;}
+        }
+    </style>
+</head>
+<body>
+    <svg class="sv">
+        <circle cx="50" cy="50" r="30" />
+    </svg>
+
+
+
+    <style>
+        #Layer_1{width: 300px;height: 300px;background: #ddd;}
+        .eye1st{
+            transform: scale(1);
+            transform-origin: 45% 40%;
+            /* animation: eye1 .5s linear alternate infinite; */
+        }
+        .eye2st{
+            transform: scale(1);
+            transform-origin: 55% 40%;
+            /* animation: eye2 .5s linear alternate infinite; */
+        }
+
+
+        @keyframes eye1{
+            100%{transform: scale(1.5);}
+        }
+        @keyframes eye2{
+            100%{transform: scale(1.5);}
+        }
+
+        #Layer_1:hover .eye1st{
+            animation: eye1 .5s linear alternate infinite;
+        }
+        #Layer_1:hover .eye2st{
+            animation: eye1 .5s linear alternate infinite;
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+    
+<!-- SVGOMG
+Powered by SVGO v2.6.1
+
+Open SVG
+Paste markup
+Demo
+Contribute
+About
+
+782 bytes → 613 bytes 78.39% -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 500 500">
+  <style>
+    .st0,.st2{fill:#fff;stroke:#000;stroke-width:4;stroke-miterlimit:10}.st2{stroke-width:3}
+  </style>
+  <path class="st0" d="M371 216.5c-5.9 0-11.3 2.1-15.5 5.6-3.5-20.9-12.7-39.8-26.1-55.1H160.3c-13.3 15.3-22.6 34.2-26.1 55.1-4.2-3.5-9.6-5.6-15.5-5.6-13.3 0-24.2 10.8-24.2 24.2 0 13.3 10.8 24.2 24.2 24.2 5.9 0 11.3-2.1 15.5-5.6 8.8 53.1 55 93.7 110.6 93.7 55.6 0 101.8-40.5 110.6-93.7 4.2 3.5 9.6 5.6 15.5 5.6 13.3 0 24.2-10.8 24.2-24.2.1-13.4-10.8-24.2-24.1-24.2z"/>
+  <path d="M244.9 128.5c-33.8 0-64 14.9-84.6 38.5h169.1c-20.5-23.6-50.8-38.5-84.5-38.5z" style="fill:#f7941d;stroke:#000;stroke-width:4;stroke-miterlimit:10"/>
+  <path class="st2" d="M120.3 252.4c-6.7.4-12.5-4.7-13-11.5-.4-6.7 4.7-12.5 11.5-13m252.1.1c6.8.2 12.1 5.8 11.9 12.6-.2 6.8-5.8 12.1-12.6 11.9"/>
+  <path class="st0" d="M244.9 324.1c26.1 0 47.2-21.1 47.2-47.2h-94.4c0 26.1 21.1 47.2 47.2 47.2z"/>
+  <path class="st2" d="M230 277.3h29.7v23.1H230z"/>
+  <circle cx="201.5" cy="218.8" r="15" class="eye1st"/>
+  <circle cx="286.9" cy="218.8" r="15" class="eye2st"/>
+</svg>
+</body>
+</html>
