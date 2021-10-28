@@ -84,34 +84,71 @@
 
 
 
-      function print(){
-          let text = '';
-          for(let i=0;i<obj.length;i++){
-            // document.write(i+"<br>")
-            // text += i + "<br>";
-            text += `<tr>`
-              // for(let j=0;j<obj[i].length){
-              //   text += `<td>${j}</td>`
-              // }
+      function printSub(){
+         for(let i=0;i<obj.length;i++){
+            if(obj[i][0] == "전공필수"){
+                document.write("<tr class='bg'>")
+            }else{
+                document.write("<tr>")
+            }
+            for(let j=0;j<obj[i].length;j++){
+                document.write("<td>" + obj[i][j] + "</td>")
+            }
 
-            text += `</tr>`
+            //  for 
 
-          }
-          document.write(text)
+            document.write("</tr>")
+         }
       }
       
 </script>
 
 
   <style>
-    .box{background: skyblue;padding: 10px;}
+    .box{_background: skyblue;padding: 10px;}
+    .bg{background: #ddd;}
+    table{
+        width: 100%;border-collapse: collapse;
+        border-top: 2px solid orange;
+    }
+    tbody{text-align: center;}
+    tbody tr{border-bottom: 1px solid #ccc;}
+    tbody td{padding: 10px 0;border-right: 1px solid #ccc;}
+    tbody td:last-child{border-right: 0 none;}
+    thead th{padding: 10px 0;background: #555;color: #fff;}
   </style>
 
 
 
 
   <table class="box">
-    <script>print()</script>
+      <colgroup>
+        <col width="10%">
+        <col width="17%">
+        <col width="9%">
+        <col width="9%">
+        <col width="9%">
+        <col width="9%">
+        <col width="9%">
+        <col width="9%">
+        <col width="9%">
+        <col width="9%">
+      </colgroup>
+      <thead>
+          <tr>
+              <th>구분</th>
+              <th>과목명</th>
+              <th>모집정원</th>
+              <th>학급수</th>
+              <th>이수기간</th>
+              <th>학점</th>
+              <th>강의</th>
+              <th>실습</th>
+              <th>개설과목</th>
+              <th>비고</th>
+          </tr>
+      </thead>
+    <script>printSub()</script>
   </table>
 
 
