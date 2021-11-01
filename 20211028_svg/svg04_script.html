@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{height: 300vh;}
+        .box{width: 500px;position: relative;top: 100vh;height: 100vh;}
+        .st1{
+            fill: none;
+            stroke: #fff;
+            stroke-width: 1;
+            stroke-dasharray: 331;
+            stroke-dashoffset: 331;
+            animation: lineAni 1s alternate forwards;
+        }
+        @keyframes lineAni{
+            100%{stroke-dashoffset: 0;}
+        }
+        .box.on .line1{animation-delay: 0.2s;}
+        .box.on .line2{animation-delay: 0.4s;}
+        .box.on .line3{animation-delay: 0.6s;}
+        .box.on .line4{animation-delay: 0.8s;}
+        .box.on .line5{animation-delay: 1s;}
+        .box.on .box.on.line6{animation-delay: 1.2s;}
+        .box.on .line7{animation-delay: 1.4s;}
+        .box.on .line8{animation-delay: 1.6s;}
+        .box.on .line9{animation-delay: 1.8s;}
+        .box.on .line10{animation-delay: 2s;}
+        .box.on .box.on{animation: lineAni 2s alternate forwards;}
+
+        .view{position: fixed;z-index: 1;}
+    </style>
+</head>
+<body>
+    <div class="view">
+        scrollTop: <span class="scrollY">0</span><br>
+        window height: <span class="winHeight">0</span><br>
+        scroll height: <span class="sHeight">0</span><br>
+    </div>
+    <div class="box">
+        <svg version="1.1" id="Layer_1" viewBox="0 0 300 300">
+            <style>
+              .st1,.st2,.st3,.st4{fill:none;stroke:#fcee21;stroke-miterlimit:10}.st2,.st3,.st4{stroke:#e6e826}.st3,.st4{stroke:#d1e12a}.st4{stroke:#bbdb2f}.st10,.st5,.st6,.st7,.st8,.st9{fill:none;stroke:#a5d533;stroke-miterlimit:10}.st10,.st6,.st7,.st8,.st9{stroke:#90ce38}.st10,.st7,.st8,.st9{stroke:#7ac83c}.st10,.st8,.st9{stroke:#64c241}.st10,.st9{stroke:#4fbb45}.st10{stroke:#39b54a}
+            </style>
+            <text transform="translate(237.084 347.83)" style="font-family:'HancomMalangMalang-Bold';font-size:28.583px">안녕하세요</text>
+            <path d="M207 364s23 31 60 21c0 0 21-10 40-17 0 0 34-15 55 1 0 0 44 14 50-5" style="fill:none;stroke:#000;stroke-miterlimit:10"/>
+           
+                <path class="st1 line1" d="M-66.5 297.5s12 46 54 50 1 0 1 0 34-12 77 21"/>
+                <path class="st1 line2" d="M-61.94 296.72s13.3 43.05 51.67 47.78c37.22 4.58.89 4.11 1.56 5.33 0 0 33.22-6.56 75.67 21.44"/>
+                <path class="st1 line3" d="M-57.39 295.94s14.5 40.1 49.33 45.56c32.42 5.08.78 8.22 2.11 10.67 0 0 32.44-1.11 74.33 21.89"/>
+                <path class="st1 line4" d="M-52.83 295.17s15.55 37.12 47 43.33c27.59 5.46.67 12.33 2.67 16 0 0 31.67 4.33 73 22.33"/>
+                <path class="st1 line5" d="M-48.28 294.39s16.43 34.1 44.67 41.11c22.75 5.65.56 16.44 3.22 21.33 0 0 30.89 9.78 71.67 22.78"/>
+                <path class="st1 line6" d="M-43.72 293.61s19.22 26 42.33 38.89c18.67 1.78.44 20.56 3.78 26.67 0 0 30.11 15.22 70.33 23.22"/>
+                <path class="st1 line7" d="M-39.17 292.83s20.67 22 40 36.67c14 1.33.33 24.67 4.33 32 0 0 29.33 20.67 69 23.67"/>
+                <path class="st1 line8" d="M-34.61 292.06s22.11 18 37.67 34.44c9.33.89.22 28.78 4.89 37.33 0 0 28.56 26.11 67.67 24.11"/>
+                <path class="st1 line9" d="M-30.06 291.28s23.56 14 35.33 32.22c4.67.44.11 32.89 5.44 42.67 0 0 27.78 31.56 66.33 24.56"/>
+                <path class="st1 line10" d="M-25.5 290.5s25 10 33 30c0 0 0 37 6 48 0 0 27 37 65 25M7.5 43.71s94.77 107.09 145.96 116.82c0 0 103.48 18.39 128.54 113.58"/>
+                <path class="st1 line11" d="M18.03 40.46s91.02 101.92 136.52 117.9c0 0 91.02 24.16 122.36 117.06"/>
+                <path class="st1 line12" d="M28.56 37.22s87.26 96.75 127.08 118.98c0 0 78.55 29.93 116.19 120.55"/>
+                <path class="st1 line13" d="M39.09 33.97s83.51 91.58 117.64 120.07c0 0 66.08 35.7 110.02 124.03"/>
+                <path class="st1 line14" d="M49.62 30.73s79.76 86.41 108.2 121.15c0 0 53.62 41.46 103.85 127.52"/>
+                <path class="st1 line15" d="M60.15 27.48s76.01 81.25 98.76 122.23c0 0 41.15 47.23 97.67 131"/>
+                <path class="st1 line16" d="M70.68 24.24s72.26 76.08 89.32 123.31c0 0 28.68 53 91.5 134.49"/>
+                <path class="st1 line17" d="M81.21 20.99s68.5 70.91 79.88 124.39c0 0 16.22 58.77 85.33 137.97"/>
+                <path class="st1 line18" d="M91.74 17.75s64.75 65.74 70.44 125.47c0 0 3.75 64.54 79.15 141.46"/>
+                <path class="st1 line19" d="M102.27 14.5s61 60.57 61 126.56c0 0-8.71 70.31 72.98 144.94"/>
+            
+          </svg>
+    </div>
+
+
+
+    <script>
+        window.addEventListener("scroll",function(){
+            if(window.pageYOffset > 300){
+                document.querySelector(".box").classList.add("on")
+            }else{
+                document.querySelector(".box").classList.remove("on")
+            }
+
+
+            document.querySelector(".scrollY").innerHTML = window.pageYOffset; //현재스크롤 위치
+            document.querySelector(".winHeight").innerHTML = window.innerHeight; //브라우져 높이
+            document.querySelector(".sHeight").innerHTML = document.body.offsetHeight - window.innerHeight; // 문서높이 - 브라우저높이 / 실제스크롤높이
+
+            document
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{width: 200px;height: 200px;background: skyblue;}
+        .cls-1{fill: blue;stroke: red;stroke-dasharray: 10px;
+            animation: textAni 2s alternate forwards;}
+        .cls-2{
+            fill: slateblue;opacity: 0;
+            animation: clsFill 2s alternate forwards;
+        }
+        /* .line1{
+            fill: none;stroke: royalblue;
+            stroke-width: 1;stroke-dasharray: 10px;
+            animation: textAni 2s alternate forwards;
+        } */
+
+        @keyframes textAni{
+            100%{stroke-dashoffset: 700;}
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <svg id="svg01" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 205.88 62.52">
+        <text transform="translate(30.49 22.87)" style="font-size:28.58px;font-family:HancomMalangMalang-Bold,Hancom MalangMalang;font-weight:700">
+            안녕하세요
+        </text>
+    
+        <path class="cls-1" d="M59 129s23 31 60 21c0 0 21-10 40-17 0 0 34-15 55 1 0 0 44 14 50-5" transform="translate(-58.6 -89.96)" class="line1"/>
+        <path class="cls-2" d="M59 129s23 31 60 21c0 0 21-10 40-17 0 0 34-15 55 1 0 0 44 14 50-5" transform="translate(-58.6 -89.96)" class="line1"/>
+    </svg>         
+</div>
+
+</body>
+</html>
