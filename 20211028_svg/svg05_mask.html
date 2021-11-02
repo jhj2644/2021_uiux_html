@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrap{width: 300px;height: 300px;}
+        .cls-2.eye{
+            fill:#231f20;
+            transform-origin: 50% 55%;
+            animation: eye 1s alternate infinite;
+        }
+        @keyframes eye {
+            80%{
+                transform: scaleY(1);
+            }
+            100%{
+                transform: scaleY(0.2);
+            }
+        }
+        .cls-4{fill:#ee1c4e}
+
+        .mask1{
+            fill:#fff;
+            stroke:none;
+        }
+        .myface{
+            transform: translateX(-10px);
+            animation: faceAni 1s alternate infinite;
+        }
+        @keyframes faceAni {
+            to{transform: translateX(-20px);}
+        }
+      </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <svg id="Layer_1" viewBox="0 0 182.33 151.78">
+            <defs>
+                <mask id="face_mask">
+                    <path class="mask1" d="M239.67 104.28A28.67 28.67 0 0 0 183.89 95a78 78 0 0 0-68.62-2.16 28.67 28.67 0 1 0-36.94 38.08 65.31 65.31 0 0 0-4.66 24.26c0 38.24 33 69.25 73.75 69.25s73.75-31 73.75-69.25A65.32 65.32 0 0 0 217 132.3a28.67 28.67 0 0 0 22.67-28.02Z" transform="translate(-58.83 -74.11)" style="stroke:#231f20;stroke-miterlimit:10;stroke-width:3px;fill:#fff"/>
+                </mask>
+            </defs>
+            <path d="M239.67 104.28A28.67 28.67 0 0 0 183.89 95a78 78 0 0 0-68.62-2.16 28.67 28.67 0 1 0-36.94 38.08 65.31 65.31 0 0 0-4.66 24.26c0 38.24 33 69.25 73.75 69.25s73.75-31 73.75-69.25A65.32 65.32 0 0 0 217 132.3a28.67 28.67 0 0 0 22.67-28.02Z" transform="translate(-58.83 -74.11)" style="stroke:#231f20;stroke-miterlimit:10;stroke-width:3px;fill:#fff"/>
+
+            <g class="myface" mask="url(#face_mask)">
+                <g class="myface">
+                    <circle class="cls-2 eye" cx="64.99" cy="63.74" r="6.44"/>
+                    <circle class="cls-2" cx="110.99" cy="63.74" r="6.44"/>
+                    <path d="M168.9 174.67c0 10-9.66 18.08-21.57 18.08s-21.58-8.09-21.58-18.08" transform="translate(-58.83 -74.11)" 
+                    style="fill:none;stroke-linecap:round;stroke:#231f20;
+                    stroke-miterlimit:10;stroke-width:3px"/>
+                    <circle class="cls-4" cx="135.47" cy="92.74" r="13.48"/>
+                    <circle class="cls-4" cx="38.97" cy="92.74" r="13.48"/>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+</body>
+</html>
