@@ -42,7 +42,7 @@
         .wall.wall_0st.right{
             transform: rotateY(90deg) translate3d(0,0,-400vw);
         }
-        .wall.wall_sst{
+        .wall.wall_title{
             transform: translate3d(0,0,500vw);
             background-image: url(images/firewatch.jpg);
         }
@@ -94,7 +94,8 @@
             <div class="house">
                 <div class="wall wall_0st left">left</div>
                 <div class="wall wall_0st right">right</div>
-                <div class="wall wall_sst">view0</div>
+                <div class="wall wall_title">title</div>
+                <!-- <div class="wall wall_sst">view0</div> -->
                 <div class="wall wall_1st">view1</div>
                 <div class="wall wall_2st">view2</div>
                 <div class="wall wall_3st">view3</div>
@@ -111,6 +112,9 @@
 
 
     <script>
+        let menuPosX = 0;
+        let menuPosY = 0;
+
         window.addEventListener("scroll",function(){
             let scroll = window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
             document.querySelector(".scroll").innerHTML = scroll * 1000;
@@ -119,6 +123,14 @@
             // document.querySelector(".house").style.transform = "translate3d(0,0,"+ ratio +"vw)"
             document.querySelector(".house").style.transform = `translate3d(0,0,${ratio}vw)`
         })
+
+        window.addEventListener("mousemove",function(e){
+            console.log(1 - e.clientX / window.innerWidth * 2)
+            menuPosX = -1 + e.clientX / window.innerWidth * 2;
+            menuPosY = 1 - e.clientY / window.innerHeight * 2;
+            document.querySelector(".stage").style.transform = `rotateY(${menuPosX*20}deg) rotateX(${menuPosY*20}deg)`
+
+        });
     </script>
 </body>
 </html>
