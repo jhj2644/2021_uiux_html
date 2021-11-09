@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lottie02</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+
+    <style>
+        body{
+            height: 400vh;
+        }
+        #firstLottie{position: absolute;top: 100%;left: 50%;transform: translate(-50%,-50%);}
+    </style>
+</head>
+<body>
+    <!-- <lottie-player id="firstLottie" src="https://assets2.lottiefiles.com/packages/lf20_hcae8wxn.json" style="width:400px; height: 400px;">"></lottie-player> -->
+
+    
+    <div class="box">
+        <lottie-player id="firstLottie" src="https://assets2.lottiefiles.com/packages/lf20_hcae8wxn.json" style="width:400px; height: 400px;"></lottie-player>
+    </div>
+
+    <script>
+        LottieInteractivity.create({
+            mode:"scroll",
+            player:'#firstLottie',
+            actions: [
+                {
+                    visibility:[0,1],
+                    type: "seek",
+                    frames: [0, 300],
+                },
+            ]  
+        });
+    </script>
+</body>
+</html>
