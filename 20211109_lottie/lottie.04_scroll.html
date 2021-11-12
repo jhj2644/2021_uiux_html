@@ -11,7 +11,7 @@
         body{height: 400vh;}
         .box1{
             width: 100%;height: 100%;
-            background: skyblue;cursor: pointer;
+            background: black;cursor: pointer;
             position: fixed;left: 50%;top: 50%;
             transform: translate(-50%,-50%);
         }
@@ -35,6 +35,7 @@
             path:'https://assets2.lottiefiles.com/packages/lf20_dhcju67u.json'
         });
        
+        const box1 = document.querySelector(".box1")
         const scroll = document.querySelector(".scroll");
         const scrollMax = document.querySelector(".scrollMax");
         const scrollRatio = document.querySelector(".scrollRatio");
@@ -51,6 +52,14 @@
             scrollMax.innerHtml = scrollHeight
             scrollRatio.innerHtml = ratio
 
+
+            if(scrollY > 1800){
+                box1.style.position = "absolute"
+                box1.style.top = `${1800+window.innerHeight/2}px`
+            }else{
+                box1.style.position = "fixed";
+                box1.style.top = "50%"
+            }
         })
 
 
