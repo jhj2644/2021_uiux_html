@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skrollr</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="js/skrollr.min.js"></script>
+
+    <style>
+        body{height: 500vh;background: #000;}
+        .box{position: fixed;color: #fff;}
+        #scene_1st{
+            background: url(img/bg/space_stars_static.svg);
+            height: 500vh;width: 100%;
+        }
+        .man{
+            position: absolute;left: 50%;top: 50%;
+            /* transform: translate(-50%,-50%); */
+        }
+        .content1,.content2{
+            width: 300px;height: 200px;
+            background: white;
+            border-radius: 10px;padding: 16px;
+            opacity: 0;
+        }
+        
+
+        @media screen and (min-width:700px){
+            .content1{
+                position: absolute;top: 500px;right: 10%;
+            }
+            .content2{
+                position: absolute;top: 900px;left: 10%;
+        }
+        }
+        @media screen and (max-width:699px){
+            .content1,.content2{
+                position: fixed;bottom: 50px;
+                left: 50%;margin-left: -150px;
+                opacity: 0;
+            }
+        }
+
+        .container{
+            width: 1000px;_height: 500px;
+            position: absolute;top: 1500px;
+            background: skyblue;left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box">
+        현재위치 : <span class="scroll">0</span><br>
+        스크롤높이 : <span class="scrollHeight">0</span><br>
+    </div>
+
+
+    <section id="scene_1st" class="view01">
+        <div class="man"
+        data-0="transform: translate(-50%,-50%) scale(0);positon:fixed"
+        data-200="transform: translate(-50%,-50%) scale(1);"
+        >
+            <img src="img/char/character_astronaut.svg" alt=""
+            data-0='display:block'
+            data-400='display:none'
+            >
+            <img src="img/char/character_astronaut_drift.svg" alt=""
+            data-0='display:none'
+            data-400='display:block'
+            data-800='display:none'
+            >
+            <img src="img/char/character_astronaut_excited.svg" alt=""
+            data-0='display:none'
+            data-800='display:block'
+            >
+        </div>
+        <div class="text">
+            <div class="content1"
+                data-0="opacity:0"
+                data-220="opacity:1"
+                data-340="opacity:1"
+                data-480="opacity:0"
+            >
+                1. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, est?
+            </div>
+
+            <div class="content2"
+            data-0="opacity:0"
+            data-420="opacity:0"
+            data-520="opacity:1"
+            data-640="opacity:1"
+            data-780="opacity:0"
+            >
+                2. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, eos!
+            </div>
+
+            <div class="container" 
+            data-0="width:1000px"
+            data-800="width:1000px"
+            data-1000="width:1500px"
+            >
+
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores dolor harum quaerat quasi laudantium deserunt impedit cumque in sit officia totam quia, iusto provident. Repellendus, ea qui? Reiciendis minus aperiam porro eligendi eaque sunt dignissimos mollitia similique ex, quisquam sed expedita temporibus facilis facere. Placeat, voluptatem. Cupiditate, minima. Accusantium dolorem dolore velit? Fugiat illum eveniet sint accusamus laboriosam, consequatur placeat ut iure voluptatem? Debitis, eius nihil? Cumque delectus amet quasi autem? Omnis nihil natus dolorum! Est veniam corrupti debitis voluptatibus laudantium aliquam itaque, repellat consectetur sunt. Est at quam unde maxime quidem officia praesentium sint suscipit quis, perspiciatis dolorem saepe illo aliquid error eos similique voluptatibus iste. Explicabo, quisquam qui. Deleniti unde cumque, a impedit id veniam ratione voluptatum, qui cupiditate iusto illum voluptas assumenda corrupti deserunt. Optio laudantium est sequi dolor vero praesentium voluptate blanditiis enim odio nam earum consectetur, omnis cumque rerum, inventore ipsam placeat impedit esse minima tenetur magnam dolore. Debitis nostrum eius commodi optio temporibus magni sed accusamus accusantium ullam, maxime ratione inventore, quos sapiente esse vero saepe obcaecati ipsa ducimus et iure neque. Eius excepturi amet suscipit itaque ut deserunt laborum consectetur, eveniet earum, dolor incidunt quas reiciendis corrupti odio totam quam ducimus esse?
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        skrollr.init();
+
+        let scrollY = 0;
+        let wHeight = 0;
+
+        // (function(){})();  //즉시실행 함수
+
+
+        window.addEventListener("scroll",function(){
+            // viewer();
+            scrollY = window.pageYOffset; //pageYoffset 현재 위치값
+            wHeight = document.body.offsetHeight - window.innerHeight
+            //body의 전체길이에서 높이값을 빼기
+
+            document.querySelector(".scroll").innerHTML = scrollY;
+            document.querySelector(".scrollHeight").innerHTML = wHeight;
+            console.log(scrollY/wHeight*100)
+        })
+
+
+        
+    </script>
+</body>
+</html>
